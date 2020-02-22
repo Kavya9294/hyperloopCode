@@ -2,19 +2,11 @@
 
 
 
-#Code for reading from SparkFun IMU Breakout
+#Code for reading from SparkFun IMU Breakout: Sagarika
 
 
 
-#Code for Writing to SparkFun IMU Breakout
-
-
-
-#Code for Reading from LM393
-
-
-
-#Code for Writing to LM393
+#Code for Writing to SparkFun IMU Breakout: Sagarika
 
 
 
@@ -26,43 +18,27 @@
 
 
 
-#Code for REading from PT100
+#Code for Reading from MAX3186: Luiza
 
 
 
-#Code for Writing to PT100
+#Code for Writing to MAX31865: Luiza
 
 
 
-#Code for Reading from MAX31865
+#Code for Reading from TMP006 Contact-less Infrared Thermopile Sensor: Demitri
 
 
 
-#Code for Writing to MAX31865
+#Code for Writing to TMP006 Contact-less Infrared Thermopile Sensor: Demitri
 
 
 
-#Code for Reading from Contact-less Infrared Thermopile Sensor
+#Code to REad from ELEGOO HC-SR04: Alex
 
 
 
-#Code for Writing to Contact-less Infrared Thermopile Sensor
-
-
-
-#Code for Reading from UVX-300
-
-
-
-#Code to write to UVX-300
-
-
-
-#Code to REad from ELEGOO HC-SR04
-
-
-
-#Code to Write to ELEGOO HC-SR04
+#Code to Write to ELEGOO HC-SR04: Alex 
 
 
 
@@ -74,11 +50,8 @@
 
 
 
-#Code to read from TRD-S2000VD
+#Code to Read from the Pressure Sensor-
 
 
 
-#Code to Write to TRD-S2000VD
-
-
-
+#Code to Write to the Pressure Sensor
