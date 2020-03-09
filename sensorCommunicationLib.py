@@ -24,11 +24,30 @@ import adafruit_tmp006
 
 
 #Code for Reading from MAX3186: Luiza
+import time # Will print the temperature every second.
+import board
+import busio
+import digitalio
+import adafruit_max31865
+spi = busio.SPI(board.SCK, MOSI=board.MOSI, MISO=board.MISO)
+cs = digitalio.DigitalInOut(board.D5) # Chip select of the MAX31865 board.
+sensor = adafruit_max31865.MAX31865(spi, cs, wires=3)
+sensor = adafruit_max31865.MAX31865(spi, cs, rtd_nominal=100.0, ref_resistor=430.0)
 
+print(‘Resistance: {0:0.3f} Ohms’.format(sensor.resistance))
+
+# Main loop to print the temperature every second.
+while True:
+  # Read temperature.
+  temp = sensor.temperature
+  # Print the value.
+  print(‘Temperature: {0:0.3f}C’.format(temp))
+  # Delay for a second.
+  time.sleep(1.0)
 
 
 #Code for Writing to MAX31865: Luiza
-
+#want to verify that the read is woking prior to writing to the MAX31865
 
 
 #Code for Reading from TMP006 Contact-less Infrared Thermopile Sensor: Demitri
