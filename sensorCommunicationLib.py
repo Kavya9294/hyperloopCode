@@ -23,7 +23,7 @@ import adafruit_tmp006
 
 
 
-#Code for Reading from MAX3186: Luiza
+#Code for Reading from MAX31865: Luiza
 import time # Will print the temperature every second.
 import board
 import busio
