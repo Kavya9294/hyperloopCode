@@ -72,12 +72,45 @@ def get_temp_ncontact():
 
 
 
-#Code to REad from ELEGOO HC-SR04: Alex
+#Code to Read from ELEGOO HC-SR04: Alex
 
 
 
 #Code to Write to ELEGOO HC-SR04: Alex 
+def distance():
+# define inputs/outputs with
+# XX corresponds to whatever pins are being used
+TRIG = XX
+ECHO = XX
 
+# set up GPIO inputs/outputs
+GPIO.setup(TRIG, GPIO.OUT)
+GPIO.setup(ECHO, GPIO.IN)
+
+    # creating trigger pulse
+    GPIO.output(TRIG, True)
+    time.sleep(0.00001)
+    GPIO.output(TRIG,False)
+
+    # sensing return signal
+    while GPIO.input(ECHO) == 0:
+        pulse_start = time.time()
+
+    while GPIO.input(ECHO) == 1:
+        pulse_end = time.time()
+
+    # calculate pulse duration and distance
+    pulse_duration = pulse_end - pulse_start
+    distance = pulse_duration * 17150
+    # divide by 2 to calculate one way distance
+    # and round by 2 decimal places
+    distance = round(distance, 2)
+
+    # return distance
+    return distance
+
+# reset pins
+GPIO.cleanup()
 
 
 #Code to read from 3202 Mini Spy Camera
