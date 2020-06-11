@@ -80,8 +80,26 @@ def get_temp_ncontact():
 
 
 
-#Code to read from 3202 Mini Spy Camera
+#Code for 3202 Mini Spy Camera: Tommy
+# move this init to the beginning later on
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(26, GPIO.OUT)
+GPIO.output(26, 1)
 
+def take_pic():
+    GPIO.output(26, 0)
+    time.sleep(0.05)
+    GPIO.output(26, 1)
+    
+def record_vid(time_in_seconds):
+    GPIO.output(26, 0)
+    time.sleep(.6)
+    GPIO.output(26, 1)
+    time.sleep(time_in_seconds)  # may not help if using other sensors
+    GPIO.output(26, 0)
+    time.sleep(.6)
+    GPIO.output(26, 1)
 
 
 #Code to Write to 3202 Mini Spy Camera
